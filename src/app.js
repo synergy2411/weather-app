@@ -47,7 +47,7 @@ app.get("/weather", (req, res) => {
         } else {
             forecast.getForecastDetails(results.lat, results.lng, (error, forecastResult) => {
                 if (error) {
-                    console.log(error);
+                    console.log("Error", error);
                 }
                 res.send({
                     location: address,
